@@ -1,0 +1,420 @@
+{
+	"info": {
+		"_postman_id": "6fb778c1-7f69-4f13-a4f7-4c7139302b41",
+		"name": "cake-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22764716"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "admin",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "admin@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://cakeapi.projectanddemoserver.com/public/api/register",
+					"protocol": "https",
+					"host": [
+						"cakeapi",
+						"projectanddemoserver",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"abc@gmail.com\",\r\n    \"password\" : \"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cakeapi.projectanddemoserver.com/public/api/login",
+					"protocol": "https",
+					"host": [
+						"cakeapi",
+						"projectanddemoserver",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNDMyMzlmMTczODBlZjE0NGRlYTUzMjJmZDM3MzUxN2IwYTQ0ODQ2MDQyMjIxYmQxYWUwZjAxZmEzMTlhNzY5OGY4NDQwZWVmMTcwMzM5NjgiLCJpYXQiOjE2Njc5MDgwOTUuNzExOTQsIm5iZiI6MTY2NzkwODA5NS43MTE5NDEsImV4cCI6MTY5OTQ0NDA5NS43MDc2MjcsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UbJhLg4wGKgGz3uCuK3-fPOWqBj1WRIKAPPl08Sve_GHVrtoxkeDcNMIdUFjFOPNmb9xjiO47eA_9kSzEoBcL76WeLsdHFWu51Eh1qt-M89XNAv3vf6ay_SKmNYA-RqKrnIm8OMERdZePA3hbyLpmJCDXr90C3w8A0HvP4hUhE1kThvJszhc9hOry4JQiAiT9lzJ_fuV6QYLesgvje40Vi5W0Gms2AELQzeQXf0UJi4ZnjLlDPA6cHsvqCID9f2jFIX3mVc2K_oQis8icLumEr-OTo5Enm6EEJheXhhI6-lVDWWSSp5svbLf6y0LuEvzuLeOeJ9WEyJUs5HiHTgho0pOs1WqvTjbbnl5jiEiux0WO041Os5QtrVq23jp7GUu4aerzAVRCkZGPx9MPR3IfIo2fhzAegOU4dSqK50i6MtoAfVtrfVqYm4bYNejjoWaWXbZkAaTZvfq2-CyQzYUANFxIKeSqIcnca_FiTmsogPUTyQ33EFdnbQsp-xBDDyJqX6bPmLF1qqFhdwsdjXTZx0bRZYQCyMNDdPQj8MHPZSlnxyDK-jvBELdDozMsfX7ZlqzkpSLdWvJrYyGlVaWzar5XASbh1KV_yFsTm-FXO51_lOAAiw5gseGbvxCOmqzWzUZrwikm1XYNpFkL7XUcKdTpwjoYMGPNu1VO8EpGFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cake_name",
+							"value": "choco",
+							"type": "default"
+						},
+						{
+							"key": "image[]",
+							"type": "file",
+							"src": "/C:/Users/PC/Downloads/th.jfif"
+						},
+						{
+							"key": "type",
+							"value": "abc",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "12356",
+							"type": "default"
+						},
+						{
+							"key": "recipe",
+							"value": "dcdesjcdijcecefvcefv",
+							"type": "default"
+						},
+						{
+							"key": "image[]",
+							"type": "file",
+							"src": "/C:/Users/PC/Downloads/th (1).jfif"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://cakeapi.projectanddemoserver.com/public/api/cake",
+					"protocol": "https",
+					"host": [
+						"cakeapi",
+						"projectanddemoserver",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"cake"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNDMyMzlmMTczODBlZjE0NGRlYTUzMjJmZDM3MzUxN2IwYTQ0ODQ2MDQyMjIxYmQxYWUwZjAxZmEzMTlhNzY5OGY4NDQwZWVmMTcwMzM5NjgiLCJpYXQiOjE2Njc5MDgwOTUuNzExOTQsIm5iZiI6MTY2NzkwODA5NS43MTE5NDEsImV4cCI6MTY5OTQ0NDA5NS43MDc2MjcsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UbJhLg4wGKgGz3uCuK3-fPOWqBj1WRIKAPPl08Sve_GHVrtoxkeDcNMIdUFjFOPNmb9xjiO47eA_9kSzEoBcL76WeLsdHFWu51Eh1qt-M89XNAv3vf6ay_SKmNYA-RqKrnIm8OMERdZePA3hbyLpmJCDXr90C3w8A0HvP4hUhE1kThvJszhc9hOry4JQiAiT9lzJ_fuV6QYLesgvje40Vi5W0Gms2AELQzeQXf0UJi4ZnjLlDPA6cHsvqCID9f2jFIX3mVc2K_oQis8icLumEr-OTo5Enm6EEJheXhhI6-lVDWWSSp5svbLf6y0LuEvzuLeOeJ9WEyJUs5HiHTgho0pOs1WqvTjbbnl5jiEiux0WO041Os5QtrVq23jp7GUu4aerzAVRCkZGPx9MPR3IfIo2fhzAegOU4dSqK50i6MtoAfVtrfVqYm4bYNejjoWaWXbZkAaTZvfq2-CyQzYUANFxIKeSqIcnca_FiTmsogPUTyQ33EFdnbQsp-xBDDyJqX6bPmLF1qqFhdwsdjXTZx0bRZYQCyMNDdPQj8MHPZSlnxyDK-jvBELdDozMsfX7ZlqzkpSLdWvJrYyGlVaWzar5XASbh1KV_yFsTm-FXO51_lOAAiw5gseGbvxCOmqzWzUZrwikm1XYNpFkL7XUcKdTpwjoYMGPNu1VO8EpGFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cake_name",
+							"value": "ice cream123",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "abc3d",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "123333222",
+							"type": "text"
+						},
+						{
+							"key": "recipe",
+							"value": "abcjkjndxwjdnwijcnecjnvfbvgrbgtbgtbgtbhbnthbnghnbhg",
+							"type": "text"
+						},
+						{
+							"key": "image[1]",
+							"type": "file",
+							"src": "/C:/Users/PC/Downloads/th.jfif"
+						},
+						{
+							"key": "image[2]",
+							"type": "file",
+							"src": "/C:/Users/PC/Downloads/th (2).jfif"
+						},
+						{
+							"key": "image_ids[1]",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "image_ids[2]",
+							"value": "2",
+							"type": "default"
+						},
+						{
+							"key": "image[2]",
+							"type": "file",
+							"src": "/C:/Users/PC/Downloads/th (1).jfif",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://cakeapi.projectanddemoserver.com/public/api/cake/1",
+					"protocol": "https",
+					"host": [
+						"cakeapi",
+						"projectanddemoserver",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"cake",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNDMyMzlmMTczODBlZjE0NGRlYTUzMjJmZDM3MzUxN2IwYTQ0ODQ2MDQyMjIxYmQxYWUwZjAxZmEzMTlhNzY5OGY4NDQwZWVmMTcwMzM5NjgiLCJpYXQiOjE2Njc5MDgwOTUuNzExOTQsIm5iZiI6MTY2NzkwODA5NS43MTE5NDEsImV4cCI6MTY5OTQ0NDA5NS43MDc2MjcsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UbJhLg4wGKgGz3uCuK3-fPOWqBj1WRIKAPPl08Sve_GHVrtoxkeDcNMIdUFjFOPNmb9xjiO47eA_9kSzEoBcL76WeLsdHFWu51Eh1qt-M89XNAv3vf6ay_SKmNYA-RqKrnIm8OMERdZePA3hbyLpmJCDXr90C3w8A0HvP4hUhE1kThvJszhc9hOry4JQiAiT9lzJ_fuV6QYLesgvje40Vi5W0Gms2AELQzeQXf0UJi4ZnjLlDPA6cHsvqCID9f2jFIX3mVc2K_oQis8icLumEr-OTo5Enm6EEJheXhhI6-lVDWWSSp5svbLf6y0LuEvzuLeOeJ9WEyJUs5HiHTgho0pOs1WqvTjbbnl5jiEiux0WO041Os5QtrVq23jp7GUu4aerzAVRCkZGPx9MPR3IfIo2fhzAegOU4dSqK50i6MtoAfVtrfVqYm4bYNejjoWaWXbZkAaTZvfq2-CyQzYUANFxIKeSqIcnca_FiTmsogPUTyQ33EFdnbQsp-xBDDyJqX6bPmLF1qqFhdwsdjXTZx0bRZYQCyMNDdPQj8MHPZSlnxyDK-jvBELdDozMsfX7ZlqzkpSLdWvJrYyGlVaWzar5XASbh1KV_yFsTm-FXO51_lOAAiw5gseGbvxCOmqzWzUZrwikm1XYNpFkL7XUcKdTpwjoYMGPNu1VO8EpGFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://cakeapi.projectanddemoserver.com/public/api/cake/3",
+					"protocol": "https",
+					"host": [
+						"cakeapi",
+						"projectanddemoserver",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"cake",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "index",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNDMyMzlmMTczODBlZjE0NGRlYTUzMjJmZDM3MzUxN2IwYTQ0ODQ2MDQyMjIxYmQxYWUwZjAxZmEzMTlhNzY5OGY4NDQwZWVmMTcwMzM5NjgiLCJpYXQiOjE2Njc5MDgwOTUuNzExOTQsIm5iZiI6MTY2NzkwODA5NS43MTE5NDEsImV4cCI6MTY5OTQ0NDA5NS43MDc2MjcsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UbJhLg4wGKgGz3uCuK3-fPOWqBj1WRIKAPPl08Sve_GHVrtoxkeDcNMIdUFjFOPNmb9xjiO47eA_9kSzEoBcL76WeLsdHFWu51Eh1qt-M89XNAv3vf6ay_SKmNYA-RqKrnIm8OMERdZePA3hbyLpmJCDXr90C3w8A0HvP4hUhE1kThvJszhc9hOry4JQiAiT9lzJ_fuV6QYLesgvje40Vi5W0Gms2AELQzeQXf0UJi4ZnjLlDPA6cHsvqCID9f2jFIX3mVc2K_oQis8icLumEr-OTo5Enm6EEJheXhhI6-lVDWWSSp5svbLf6y0LuEvzuLeOeJ9WEyJUs5HiHTgho0pOs1WqvTjbbnl5jiEiux0WO041Os5QtrVq23jp7GUu4aerzAVRCkZGPx9MPR3IfIo2fhzAegOU4dSqK50i6MtoAfVtrfVqYm4bYNejjoWaWXbZkAaTZvfq2-CyQzYUANFxIKeSqIcnca_FiTmsogPUTyQ33EFdnbQsp-xBDDyJqX6bPmLF1qqFhdwsdjXTZx0bRZYQCyMNDdPQj8MHPZSlnxyDK-jvBELdDozMsfX7ZlqzkpSLdWvJrYyGlVaWzar5XASbh1KV_yFsTm-FXO51_lOAAiw5gseGbvxCOmqzWzUZrwikm1XYNpFkL7XUcKdTpwjoYMGPNu1VO8EpGFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://cakeapi.projectanddemoserver.com/public/api/cake",
+					"protocol": "https",
+					"host": [
+						"cakeapi",
+						"projectanddemoserver",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"cake"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTA1MDY4NmZjNmY4NWQwODZhYjY2Njc1NGE0MjI4ZjFmZWVkZWZhY2NiNjRlYzQ4MTkwNGZmNTQ3OGRlYzg2NjM0ZDg5Nzk5YjdjNzFkZGMiLCJpYXQiOjE2Njc4ODk2NDkuNjgzNDk2LCJuYmYiOjE2Njc4ODk2NDkuNjgzNDk5LCJleHAiOjE2OTk0MjU2NDkuNjY4OTExLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.VbXfM272y9cOnpRE7wbBILutKlO0WxQ7qduXEGiAK-8lhB3tgmqdY0T46IgMBIBNTR8GBcCuAIYLcBqiC7wt7LVe-rfHemD5qX4Wnc_x9mKRJZ6cW8tOnEfpzOhuew3GY7HW_T7rgkKUlbZ8W9NZRB8IjOczC--4516XNOPuVDQ8UkmJNj8yuDAgP1Qv1Q1WSOGA3QzZHNRgODRTebKWiUjRj7ppC_hBDyC8whLPtOIpfytNSJ8hsqsI7YWtoY0T5eWYRkiSX9nORgrB7z7u4cac5cApb2KR7v0lXb7lCCT0tIEfEF3Y4VAEtSGGYpCM-dDJzmaiaoH89sm0Ub6NL1F-nJUlz-R7xrbAePThSe1XuXGkvvIUG2IKuuzVqZFXYPjakgGrjDqhcmAfpBn7eMWQdHWpJSry6uT4Y7J8PBIJZsQZxlevGCWRwARMNNbnSEUjJMPKrWm5hE8pbehTRUIUm0K-xyiQrs8y5t1O6Rrl4wlfazq3DDy0AzNr0amxXGlfaDx2ItrVuehZHG7zFF0rxRSHabuxC_KzlUlkuR65f-EXivxtYMrUuT3YSpm94-57pdcJ27pEuM32CoFmx6okeua2bT_WLMlhZ7koveIJS0iw-jxYdZbwUha9q2K_2ivelu_RlRUJOi83xPyA_GFC8Y2-hcY814iXfmC1upA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cakeapi.projectanddemoserver.com/public/api/logout",
+					"protocol": "https",
+					"host": [
+						"cakeapi",
+						"projectanddemoserver",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNDMyMzlmMTczODBlZjE0NGRlYTUzMjJmZDM3MzUxN2IwYTQ0ODQ2MDQyMjIxYmQxYWUwZjAxZmEzMTlhNzY5OGY4NDQwZWVmMTcwMzM5NjgiLCJpYXQiOjE2Njc5MDgwOTUuNzExOTQsIm5iZiI6MTY2NzkwODA5NS43MTE5NDEsImV4cCI6MTY5OTQ0NDA5NS43MDc2MjcsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UbJhLg4wGKgGz3uCuK3-fPOWqBj1WRIKAPPl08Sve_GHVrtoxkeDcNMIdUFjFOPNmb9xjiO47eA_9kSzEoBcL76WeLsdHFWu51Eh1qt-M89XNAv3vf6ay_SKmNYA-RqKrnIm8OMERdZePA3hbyLpmJCDXr90C3w8A0HvP4hUhE1kThvJszhc9hOry4JQiAiT9lzJ_fuV6QYLesgvje40Vi5W0Gms2AELQzeQXf0UJi4ZnjLlDPA6cHsvqCID9f2jFIX3mVc2K_oQis8icLumEr-OTo5Enm6EEJheXhhI6-lVDWWSSp5svbLf6y0LuEvzuLeOeJ9WEyJUs5HiHTgho0pOs1WqvTjbbnl5jiEiux0WO041Os5QtrVq23jp7GUu4aerzAVRCkZGPx9MPR3IfIo2fhzAegOU4dSqK50i6MtoAfVtrfVqYm4bYNejjoWaWXbZkAaTZvfq2-CyQzYUANFxIKeSqIcnca_FiTmsogPUTyQ33EFdnbQsp-xBDDyJqX6bPmLF1qqFhdwsdjXTZx0bRZYQCyMNDdPQj8MHPZSlnxyDK-jvBELdDozMsfX7ZlqzkpSLdWvJrYyGlVaWzar5XASbh1KV_yFsTm-FXO51_lOAAiw5gseGbvxCOmqzWzUZrwikm1XYNpFkL7XUcKdTpwjoYMGPNu1VO8EpGFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cakeapi.projectanddemoserver.com/public/api/show/5",
+					"protocol": "https",
+					"host": [
+						"cakeapi",
+						"projectanddemoserver",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"show",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNDMyMzlmMTczODBlZjE0NGRlYTUzMjJmZDM3MzUxN2IwYTQ0ODQ2MDQyMjIxYmQxYWUwZjAxZmEzMTlhNzY5OGY4NDQwZWVmMTcwMzM5NjgiLCJpYXQiOjE2Njc5MDgwOTUuNzExOTQsIm5iZiI6MTY2NzkwODA5NS43MTE5NDEsImV4cCI6MTY5OTQ0NDA5NS43MDc2MjcsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UbJhLg4wGKgGz3uCuK3-fPOWqBj1WRIKAPPl08Sve_GHVrtoxkeDcNMIdUFjFOPNmb9xjiO47eA_9kSzEoBcL76WeLsdHFWu51Eh1qt-M89XNAv3vf6ay_SKmNYA-RqKrnIm8OMERdZePA3hbyLpmJCDXr90C3w8A0HvP4hUhE1kThvJszhc9hOry4JQiAiT9lzJ_fuV6QYLesgvje40Vi5W0Gms2AELQzeQXf0UJi4ZnjLlDPA6cHsvqCID9f2jFIX3mVc2K_oQis8icLumEr-OTo5Enm6EEJheXhhI6-lVDWWSSp5svbLf6y0LuEvzuLeOeJ9WEyJUs5HiHTgho0pOs1WqvTjbbnl5jiEiux0WO041Os5QtrVq23jp7GUu4aerzAVRCkZGPx9MPR3IfIo2fhzAegOU4dSqK50i6MtoAfVtrfVqYm4bYNejjoWaWXbZkAaTZvfq2-CyQzYUANFxIKeSqIcnca_FiTmsogPUTyQ33EFdnbQsp-xBDDyJqX6bPmLF1qqFhdwsdjXTZx0bRZYQCyMNDdPQj8MHPZSlnxyDK-jvBELdDozMsfX7ZlqzkpSLdWvJrYyGlVaWzar5XASbh1KV_yFsTm-FXO51_lOAAiw5gseGbvxCOmqzWzUZrwikm1XYNpFkL7XUcKdTpwjoYMGPNu1VO8EpGFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "type",
+							"value": "abc",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://cakeapi.projectanddemoserver.com/public/api/cakeFilter",
+					"protocol": "https",
+					"host": [
+						"cakeapi",
+						"projectanddemoserver",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"cakeFilter"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
